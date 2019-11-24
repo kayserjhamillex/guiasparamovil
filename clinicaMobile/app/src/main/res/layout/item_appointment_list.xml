@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="@dimen/list_margin"
+    android:clickable="true">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreyBg"
+        android:padding="@dimen/item_padding">
+
+
+        <LinearLayout
+            android:id="@+id/layoutId"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="ID:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_id"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutMedic"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutId"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Cadru Medical:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_medic_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutClinic"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutMedic"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Clinica:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_clinic_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSection"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutClinic"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sectia:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_section_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutReason"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutSection"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Motiv:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_reason"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutReason"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Data:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutDate"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Status:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/appointment_status"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

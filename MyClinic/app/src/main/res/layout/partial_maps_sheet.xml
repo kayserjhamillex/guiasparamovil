@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/maps_background_sheet"
+    app:behavior_hideable="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_maps_expended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/top_maps_expended"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_maps_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:src="@drawable/maps_ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@id/top_maps_expended"
+            app:layout_constraintStart_toStartOf="@id/top_maps_expended"
+            app:layout_constraintTop_toTopOf="@id/top_maps_expended"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_maps_expended"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/maps_bank_name"
+            android:textColor="@color/colorTopBarText"
+            app:layout_constraintBottom_toBottomOf="@id/top_maps_expended"
+            app:layout_constraintStart_toEndOf="@id/iv_maps_down"
+            app:layout_constraintTop_toTopOf="@id/top_maps_expended" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_maps_expended" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_maps_collapsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/top_maps_collapsed"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/maps_background_sheet_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_maps_collapsed"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="@string/maps_bank_name"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/maps_pay_now"
+            android:textColor="@color/colorPayNow"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="44dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_maps_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:src="@drawable/all_ic_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_maps_collapsed"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentBlue"
+        android:text="@string/maps_call"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin_half"
+        app:layout_constraintStart_toStartOf="@id/iv_maps_call"
+        app:layout_constraintEnd_toEndOf="@id/iv_maps_call"
+        app:layout_constraintTop_toBottomOf="@id/iv_maps_call"/>
+
+    <View
+        android:id="@+id/view_maps_call"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/maps_ripple_mask"
+        app:layout_constraintStart_toStartOf="@id/tv_maps_call"
+        app:layout_constraintEnd_toEndOf="@id/tv_maps_call"
+        app:layout_constraintTop_toTopOf="@id/iv_maps_call"
+        app:layout_constraintBottom_toBottomOf="@id/tv_maps_call"/>
+
+    <ImageView
+        android:id="@+id/iv_maps_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:src="@drawable/maps_ic_open"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_maps_collapsed"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentBlue"
+        android:text="@string/maps_website"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin_half"
+        app:layout_constraintStart_toStartOf="@id/iv_maps_website"
+        app:layout_constraintEnd_toEndOf="@id/iv_maps_website"
+        app:layout_constraintTop_toBottomOf="@id/iv_maps_website"/>
+
+    <View
+        android:id="@+id/view_maps_website"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/maps_ripple_mask"
+        app:layout_constraintStart_toStartOf="@id/tv_maps_website"
+        app:layout_constraintEnd_toEndOf="@id/tv_maps_website"
+        app:layout_constraintTop_toTopOf="@id/iv_maps_website"
+        app:layout_constraintBottom_toBottomOf="@id/tv_maps_website"/>
+
+    <ImageView
+        android:id="@+id/iv_maps_navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:src="@drawable/maps_ic_navigate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_maps_collapsed"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccentBlue"
+        android:text="@string/maps_visit"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:paddingLeft="@dimen/default_margin"
+        android:paddingRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin_half"
+        app:layout_constraintStart_toStartOf="@id/iv_maps_navigate"
+        app:layout_constraintEnd_toEndOf="@id/iv_maps_navigate"
+        app:layout_constraintTop_toBottomOf="@id/iv_maps_navigate"/>
+
+    <View
+        android:id="@+id/view_maps_navigate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/maps_ripple_mask"
+        app:layout_constraintStart_toStartOf="@id/tv_maps_navigate"
+        app:layout_constraintEnd_toEndOf="@id/tv_maps_navigate"
+        app:layout_constraintTop_toTopOf="@id/iv_maps_website"
+        app:layout_constraintBottom_toBottomOf="@id/tv_maps_navigate"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_maps_call" />
+
+    <TextView
+        android:id="@+id/tv_maps_rating"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maps_rating_0"
+        app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+        app:layout_constraintTop_toTopOf="@id/ratingBar"
+        app:layout_constraintEnd_toStartOf="@+id/tv_maps_rating_total" />
+
+    <TextView
+        android:id="@+id/tv_maps_rating_total"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/maps_rating_5"
+        android:textColor="@color/colorSubText"
+        app:layout_constraintBottom_toBottomOf="@id/tv_maps_rating"
+        app:layout_constraintEnd_toStartOf="@+id/ratingBar" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_maps_rating" />
+
+    <ImageView
+        android:id="@+id/iv_maps_call_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/all_ic_call"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_call_small"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_maps_call_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_maps_call_small"
+        app:layout_constraintTop_toTopOf="@id/iv_maps_call_small"
+        android:text="+919778906764" />
+
+    <ImageView
+        android:id="@+id/iv_maps_website_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/maps_ic_web"
+        app:layout_constraintStart_toStartOf="@+id/iv_maps_call_small"
+        app:layout_constraintTop_toBottomOf="@+id/iv_maps_call_small"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_website_small"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_maps_website_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_maps_website_small"
+        app:layout_constraintTop_toTopOf="@+id/iv_maps_website_small"
+        android:text="www.bank.com" />
+
+    <ImageView
+        android:id="@+id/iv_maps_address_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/maps_ic_home"
+        app:layout_constraintStart_toStartOf="@+id/iv_maps_website_small"
+        app:layout_constraintTop_toBottomOf="@+id/iv_maps_website_small"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_maps_address_small"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_maps_address_small"
+        app:layout_constraintStart_toEndOf="@+id/iv_maps_address_small"
+        app:layout_constraintTop_toTopOf="@id/iv_maps_address_small"
+        android:text="Smriti Nagar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

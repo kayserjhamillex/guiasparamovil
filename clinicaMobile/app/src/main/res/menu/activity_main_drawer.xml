@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_appointment"
+            android:title="Programare noua" />
+        <item
+            android:id="@+id/nav_old_appointments"
+            android:title="Programari anterioare" />
+        <item
+            android:id="@+id/nav_records"
+            android:title="Dosar medical" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

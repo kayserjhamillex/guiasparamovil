@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="@dimen/list_margin"
+    android:clickable="true">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreyBg"
+        android:padding="@dimen/item_padding">
+
+        <LinearLayout
+            android:id="@+id/layoutId"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="ID:"
+               android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_id"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutUsername"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/layoutId"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Utilizator:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_user_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMedic"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutUsername"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Cadru Medical:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_medic_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutClinic"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutMedic"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Clinica:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_clinic_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSection"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutClinic"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sectia:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_section_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDescription"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutSection"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Descriere:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_description"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutDescription"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Data:"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/record_created_at"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

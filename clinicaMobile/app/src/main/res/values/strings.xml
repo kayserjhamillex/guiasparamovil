@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">clinica</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_name">Nume</string>
+    <string name="prompt_phone">Numar de telefon</string>
+    <string name="prompt_password">Parola </string>
+    <string name="registration_button">Inregistreaza-te</string>
+    <string name="action_sign_in">Autentificare</string>
+    <string name="action_register">Inregistreaza-te acum</string>
+    <string name="action_sign_in_short">Autentificare</string>
+    <string name="error_invalid_email">Adresa de email este invalida</string>
+    <string name="error_invalid_password">Parola este prea scurta</string>
+    <string name="error_incorrect_password">Parola e incorecta</string>
+    <string name="error_field_required">Acest camp este obligatoriu</string>
+    <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
+    <string name="no_text"> </string>
+    <string name="registration_message">You are not registered yet. Use the registration button to complete your registration.</string>
+    <string name="registration_failed">Your email or password is already in use</string>
+    <string name="action_register_now">Don\'t have an account? Register now!</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <string name="dialog_logout_title">Logout</string>
+    <string name="dialog_logout_content">Sunteti sigur ca doriti sa faceti logout?</string>
+    <string name="prompt_logout_success">Ati fost delogat cu succes.</string>
+    <string name="label_search_sheet_id">ID Fisa</string>
+    <string name="submit_button_appointments">Trimite Programarea</string>
+    <string name="date_picker_appointments">Introdu data (YYYY-MM-DD HH:MM) </string>
+
+
+
+</resources>
